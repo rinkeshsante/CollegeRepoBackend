@@ -25,7 +25,7 @@ SECRET_KEY = '-3bh%sb49rvaaui7j%rid(2r#(corxd_$3ftfqtx22#40q4bh4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # third party
     'safedelete',
     'rest_framework',
+    'corsheaders',
 
     # local
     'Repo.apps.RepoConfig',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # by me
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -132,3 +134,8 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
+
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
