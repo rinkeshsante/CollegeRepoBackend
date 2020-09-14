@@ -8,7 +8,7 @@ from django.urls import path, include
 router = routers.DefaultRouter()
 
 # list api view set here
-router.register(r'departemnts', DepartmentViewSet)
+router.register(r'departments', DepartmentViewSet)
 router.register(r'labs', labViewSet)
 router.register(r'computers', ComputerViewSet)
 router.register(r'equipments', EquipmentViewSet)
