@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Department, Computer, Equipment, Lab, Software, Perchase
+from .models import Department, Computer, Equipment, Lab, Software, Purchase
 
 # this page will be used to decide the fields in api json
 
@@ -20,7 +20,7 @@ class LabSerializer(serializers.HyperlinkedModelSerializer):
 class ComputerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Computer
-        fields = ('id', 'name', 'Computer_no', 'ram', 'storage')
+        fields = ('id', 'name', 'Computer_no', 'ram', 'storage', 'purchase')
 
 
 class EquipmentSerializer(serializers.HyperlinkedModelSerializer):
@@ -35,7 +35,7 @@ class SoftwareSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'name', 'code', 'software_no')
 
 
-class PerchaseSerializer(serializers.HyperlinkedModelSerializer):
+class PurchaseSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Perchase
+        model = Purchase
         fields = ('id', 'bill_no', 'supplier', 'rate')

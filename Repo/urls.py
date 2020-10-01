@@ -1,6 +1,6 @@
 # myapi/urls.pyfrom django.urls import include, path
 from rest_framework import routers
-from .views import DepartmentViewSet, labViewSet, ComputerViewSet, EquipmentViewSet, SoftwareViewSet, PerchaseViewSet
+from .views import DepartmentViewSet, labViewSet, ComputerViewSet, EquipmentViewSet, SoftwareViewSet, PurchaseViewSet
 
 from django.urls import path, include
 
@@ -13,7 +13,7 @@ router.register(r'labs', labViewSet)
 router.register(r'computers', ComputerViewSet)
 router.register(r'equipments', EquipmentViewSet)
 router.register(r'softwares', SoftwareViewSet)
-router.register(r'perchases', PerchaseViewSet)
+router.register(r'purchases', PurchaseViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

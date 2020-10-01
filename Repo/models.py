@@ -44,7 +44,7 @@ class Lab(SafeDeleteModel):
     #     ]
 
 
-class Perchase(SafeDeleteModel):
+class Purchase(SafeDeleteModel):
     bill_no = models.CharField(max_length=10)
     supplier = models.TextField()
     invoice = models.CharField(max_length=20, unique=True)
@@ -72,8 +72,8 @@ class Equipment(SafeDeleteModel):
         null=True,
         on_delete=models.SET_NULL,
     )
-    perchase = models.ForeignKey(
-        'Perchase',
+    purchase = models.ForeignKey(
+        'Purchase',
         null=True,
         on_delete=models.SET_NULL,
     )
@@ -97,8 +97,8 @@ class Computer(SafeDeleteModel):
         null=True,
         on_delete=models.SET_NULL,
     )
-    perchase = models.ForeignKey(
-        'Perchase',
+    purchase = models.ForeignKey(
+        'Purchase',
         null=True,
         on_delete=models.SET_NULL,
     )
@@ -137,8 +137,8 @@ class Software(SafeDeleteModel):
     gi_no = models.IntegerField(unique=True)
     Status = models.CharField(max_length=60, default='Ok')
 
-    perchase = models.ForeignKey(
-        'Perchase',
+    purchase = models.ForeignKey(
+        'Purchase',
         null=True,
         on_delete=models.SET_NULL,
         blank=True,
