@@ -13,7 +13,7 @@ router.register(r'labs', labViewSet)
 router.register(r'computers', ComputerViewSet)
 router.register(r'equipments', EquipmentViewSet)
 router.register(r'softwares', SoftwareViewSet)
-router.register(r'perchases', PerchaseViewSet)
+router.register(r'purchases', PerchaseViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
